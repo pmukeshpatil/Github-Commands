@@ -1,0 +1,118 @@
+1. Create an account in github portal.
+2. Visual Studio Code download and install.
+3. download and install Gitbash for windows users.
+
+## Why we need to use Github?
+==>> Code should never be local and it should always be remote.
+==>> Version Control System (VCS)
+		. Maintaining your code in version manner.
+		. SVN & GIT are famous tools.
+		. GIT is highly used on modern development.
+					
+Git: 
+it is a client version.
+Local version control system.
+
+Github:
+It is a Enterprise version/central repository.
+Central remote version control system.
+
+In github, create a repository by giving any name for examle, shell-scripting.
+to download a git repository in local system use a below command by selecting a proper directory.
+git clone https://github.com/pmukeshpatil/shell-scripting.git
+
+code is a Visual Studio command which open a folder in VS.
+EX: code shell-scripting
+
+Common Git commands:
+$ git clone repoURL.git                         ; clones or download the repository from GitHUb
+$ git add fileName  or   git add .              ; git will start tracking all the changes that you made 
+$ git commit -m "Brief message of your changes" ; commit means, you're telling git to COMMIT/SAVE it ; you can only push the changes that are commited.
+$ git push                                      ; pushes the changes that you've made to gitHub 
+$ git pull                                      ; be in the folder repository, this will pull all the changes
+
+1. git add . (dot indicates a present working directory which means to telling a git to start tracking everything)
+2. git commit -m "pass the meaningful comments"
+3. git push.
+
+How to authenticate from your local to GitHub ?
+1) Github authentication works based on PAT. ( Personal Acccess Token )
+2) your profile on github ---> settings ---> Developer Settings  ----> Generate Classic PAT 
+3) When you do a git push, git prompts you to enter the PAT and that's it bingo. You're authenticated.
+(PS : PAT is sensitive and is not supposed to be shared with anyone.)
+git add . ; git commit -m "Updated a readme file" ; git push
+
+---------------------------------------------------------------------------------------------------------------
+Commands:
+#!/bin/bash
+How to run a linux bash script ? 
+bash scriptName.sh 
+sh scriptName.sh 
+./scriptName
+
+alias gp="git pull" .... "it's temporary" 
+
+[ centos@WS ~ ]$ vim ~/.bash_profile   ........."it activated permenant"
+"What ever you post inside file, it will be activated for permenant."
+alias gp="git pull"
+
+
+### Other Iportant GIT Commands.
+
+git checkout -b UAT   .......(User Acceptance Testing)
+vi UAT
+git add -A
+git commit -m "myuat"
+git push -u origin UAT
+
+
+git checkout -b SIT  ..........(System Integration Testing.)
+vi mySIT
+git add -A
+git commit -m "mysit"
+git push -u origin SIT
+
+git checkout -b sprint1
+vi mysprint1
+git add -A
+git commit -m "sprint1"
+git push -u origin sprint1
+
+git checkout SIT
+
+git checkout -b sprint2
+vi mysprint2
+git add -A
+git commit -m "sprint2"
+git push -u origin sprint2
+
+git checkout sprint1
+vi javaADDfunction
+git add -A
+git commit -m "Javaaddfunc"
+gt push -u origin sprint1
+
+
+
+$ git checkout SIT
+$ git merge sprint1
+$ git push -u origin SIT
+
+$ git merge sprint2
+$ git push -u origin SIT
+
+$ git checkout UAT
+$ git merge SIT
+$ git push -u origin UAT
+
+$ git checkout main
+$ git merge UAT
+$ git push
+
+
+git tag SBI_R_2.0
+git tag
+git log
+
+$ git checkout SBI_R_2.0
+$ git push -u origin SBI_R_2.0
